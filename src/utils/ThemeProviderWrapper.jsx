@@ -1,21 +1,27 @@
-import { createContext, useContext, useEffect, useState, useMemo } from 'react';
-import { ThemeProvider } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
-import PropTypes from "prop-types"; 
-import { getTheme } from './theme';
+import { CssBaseline } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { getTheme } from "./theme";
+import PropTypes from 'prop-types'; 
+
 
 const ThemeToggleContext = createContext({
-  toggleTheme: () => {}
+  toggleTheme: () => {},
 });
+
 
 export const useThemeToggle = () => useContext(ThemeToggleContext);
 
+
+
 export const ThemeProviderWrapper = ({ children }) => {
-  const [mode, setMode] = useState(() => localStorage.getItem('themeMode') || 'dark');
+  const [mode, setMode] = useState(
+    () => localStorage.getItem("themeMode") || "dark"
+  );
 
   const toggleTheme = () => {
-    const newMode = mode === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('themeMode', newMode);
+    const newMode = mode === "dark" ? "light" : "dark";
+    localStorage.setItem("themeMode", newMode);
     setMode(newMode);
   };
 
@@ -26,18 +32,18 @@ export const ThemeProviderWrapper = ({ children }) => {
     document.body.style.backgroundColor = theme.palette.background.default;
     document.body.style.color = theme.palette.text.primary;
   }, [theme]);
+  
 
   return (
     <ThemeToggleContext.Provider value={{ toggleTheme }}>
       <ThemeProvider theme={theme}>
-        <CssBaseline /> {/* Normalize the CSS and ensure the background applies globally */}
+        <CssBaseline />{" "}
+        {/* Normalize the CSS and ensure the background applies globally */}
         {children}
       </ThemeProvider>
     </ThemeToggleContext.Provider>
   );
 };
-
-
 // Define prop types
 ThemeProviderWrapper.propTypes = {
   children: PropTypes.node.isRequired, // 'node' covers anything that can be rendered: numbers, strings, elements, or an array (or fragment) containing these types.
