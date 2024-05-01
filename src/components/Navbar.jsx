@@ -1,7 +1,6 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import Toolbar from "@mui/material/Toolbar";
@@ -18,6 +17,7 @@ import {
   ThemeProviderWrapper,
   useThemeToggle,
 } from "../utils/ThemeProviderWrapper";
+import { Container } from "@mui/material";
 
 const ThemeToggleButton = () => {
   const { toggleTheme, mode } = useThemeToggle();
@@ -45,8 +45,8 @@ function Navbar() {
 
   return (
     <ThemeProviderWrapper>
-      <AppBar color="inherit" position="static">
-        <Container maxWidth="xl">
+      <Container>
+        <AppBar color="inherit" position="static">
           <Toolbar>
             <Typography
               variant="h6"
@@ -134,7 +134,13 @@ function Navbar() {
                 ))}
               </Menu>
             </Box>
-                      <Box sx={{ margin: "auto", display: { xs: "flex", md: "none"}, textAlign: "center" }}>
+            <Box
+              sx={{
+                margin: "auto",
+                display: { xs: "flex", md: "none" },
+                textAlign: "center",
+              }}
+            >
               <Typography
                 variant="h6"
                 noWrap
@@ -142,8 +148,8 @@ function Navbar() {
                 href="#app-bar-with-responsive-menu"
                 color="primary"
                 sx={{
-                    mr: 1,
-                    
+                  mr: 1,
+
                   display: { xs: "flex", md: "none" },
                   fontFamily: "monospace",
                   fontWeight: 700,
@@ -160,7 +166,7 @@ function Navbar() {
                 href="#app-bar-with-responsive-menu"
                 color="inherit"
                 sx={{
-                    mr: 2,
+                  mr: 2,
                   display: { xs: "flex", md: "none" },
                   fontFamily: "monospace",
                   fontWeight: 700,
@@ -201,8 +207,8 @@ function Navbar() {
             </Box>
             <ThemeToggleButton />
           </Toolbar>
-        </Container>
-      </AppBar>
+        </AppBar>
+      </Container>
     </ThemeProviderWrapper>
   );
 }

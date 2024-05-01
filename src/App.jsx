@@ -1,4 +1,6 @@
 
+import { Container } from "@mui/material";
+import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import { ThemeProviderWrapper } from "./utils/ThemeProviderWrapper";
 
@@ -7,7 +9,10 @@ import { ThemeProviderWrapper } from "./utils/ThemeProviderWrapper";
 function App() {
   return (
     <ThemeProviderWrapper>
-      <Navbar />
+      <Container maxWidth="lg">
+        <Navbar />
+        <Home />
+      </Container>
     </ThemeProviderWrapper>
   );
 }

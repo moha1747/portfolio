@@ -1,4 +1,4 @@
-import { purple } from "@mui/material/colors";
+import { purple, grey } from "@mui/material/colors";
 import { createTheme } from "@mui/material";
 export const getTheme = (mode) => {
   return createTheme({
@@ -8,7 +8,7 @@ export const getTheme = (mode) => {
         main: mode === "light" ? "#854ce6" : purple["A200"], // Example colors
       },
       secondary: {
-        main: purple["A200"],
+        main: grey[500],
       },
       text: {
         primary: mode === "light" ? "#212121" : "#ffffff",
@@ -16,8 +16,8 @@ export const getTheme = (mode) => {
           mode === "light" ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.7)",
       },
       background: {
-        default: mode === "light" ? "#ffffff" : "#121212",
-        paper: mode === "light" ? "#ffffff" : "#1e1e1e",
+        default: mode === "light" ? "#ffffff" : "#000",
+        paper: mode === "light" ? "#ffffff" : "#000",
       },
     },
     typography: {
@@ -56,7 +56,7 @@ export const getTheme = (mode) => {
       },
       h3: {
         fontSize: "1.75rem", // 28px
-        fontWeight: "bold",
+
         "@media (max-width:600px)": {
           fontSize: "1.25rem", // 20px
         },
@@ -66,7 +66,7 @@ export const getTheme = (mode) => {
       },
       h4: {
         fontSize: "1.5rem", // 24px
-        fontWeight: "bold",
+
         "@media (max-width:600px)": {
           fontSize: "1.125rem", // 18px
         },
@@ -76,7 +76,7 @@ export const getTheme = (mode) => {
       },
       h5: {
         fontSize: "1.25rem", // 20px
-        fontWeight: "bold",
+
         "@media (max-width:600px)": {
           fontSize: "1rem", // 16px
         },
@@ -86,7 +86,7 @@ export const getTheme = (mode) => {
       },
       h6: {
         fontSize: "1rem", // 16px
-        fontWeight: "bold",
+
         "@media (max-width:600px)": {
           fontSize: "0.875rem", // 14px
         },
