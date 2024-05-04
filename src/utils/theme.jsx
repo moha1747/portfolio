@@ -8,16 +8,19 @@ export const getTheme = (mode) => {
         main: mode === "light" ? "#854ce6" : purple["A200"], // Example colors
       },
       secondary: {
-        main: grey[500],
+        main: mode === "light" ? grey[500] : grey[700],
       },
       text: {
-        primary: mode === "light" ? "#212121" : "#ffffff",
+        primary: mode === "dark" ? "#212121" : "#ffffff",
         secondary:
-          mode === "light" ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.7)",
+          mode === "dark" ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.7)",
       },
       background: {
-        default: mode === "light" ? "#ffffff" : "#000",
-        paper: mode === "light" ? "#ffffff" : "#000",
+        default: mode === "dark" ? "#ffffff" : "#000",
+        paper: mode === "dark" ? "#ffffff" : "#000",
+      },
+      shadows: {
+        main: mode === "dark" ? "#854ce6" : purple["A200"],
       },
     },
     typography: {
