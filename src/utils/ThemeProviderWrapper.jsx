@@ -35,7 +35,7 @@ export const ThemeProviderWrapper = ({ children }) => {
   
 
   return (
-    <ThemeToggleContext.Provider value={{ toggleTheme }}>
+    <ThemeToggleContext.Provider value={{ toggleTheme, mode }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />{" "}
         {/* Normalize the CSS and ensure the background applies globally */}
