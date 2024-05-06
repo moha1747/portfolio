@@ -3,7 +3,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { getTheme } from "./theme";
 import PropTypes from "prop-types";
-
+import { CustomThemeProvider } from "../components/styles/SkillsCards";
 const ThemeToggleContext = createContext({
   toggleTheme: () => {},
   mode: "dark", // Add default mode to context value for better typing
@@ -49,8 +49,10 @@ export const ThemeProviderWrapper = ({ children }) => {
   return (
     <ThemeToggleContext.Provider value={{ toggleTheme, mode }}>
       <ThemeProvider theme={theme}>
-        <CssBaseline /> {/* Normalize CSS and apply background globally */}
-        {children}
+        <CustomThemeProvider theme={theme}>
+          <CssBaseline /> {/* Normalize CSS and apply background globally */}
+          {children}
+        </CustomThemeProvider>
       </ThemeProvider>
     </ThemeToggleContext.Provider>
   );
