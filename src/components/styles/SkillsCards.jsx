@@ -1,6 +1,17 @@
 import styled from "styled-components";
 import { skills } from "../../data/data";
 import { Tilt } from "react-tilt";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
+import { useTheme as useMuiTheme } from "@mui/material/styles";
+
+// eslint-disable-next-line react/prop-types
+export const CustomThemeProvider = ({ children }) => {
+  const theme = useMuiTheme(); // Ensure this is fetching the theme
+  console.log(theme); // Add this line to check what theme is fetched
+
+  return <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>;
+};
+
 
 const Container = styled.div`
   display: flex;
@@ -55,12 +66,13 @@ const SkillsContainer = styled.div`
   margin-top: 20px;
   gap: 50px;
 `;
+//   background-color: rgba(17, 25, 40, 0.83); dark
 
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
-  background-color: rgba(17, 25, 40, 0.83);
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  background-color: ${({ theme }) => (theme.mode === "dark" ? "rgba(17, 25, 40, 0.83)" : "rgba(155, 255, 255, 0.83)")};
+  border: 1px solid 
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
