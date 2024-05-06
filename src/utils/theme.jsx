@@ -18,9 +18,19 @@ export const getTheme = (mode) => {
       background: {
         default: mode === "dark" ? "#ffffff" : "#000",
         paper: mode === "dark" ? "#ffffff" : "#000",
-      },
-      shadows: {
-        main: mode === "dark" ? "#854ce6" : purple["A200"],
+
+        border:
+          mode === "dark"
+            ? "rgba(255, 255, 255, 0.125)"
+            : "rgba(0, 0, 0, 0.125)",
+        boxShadow:
+          mode === "dark"
+            ? "rgba(23, 92, 230, 0.15)"
+            : "rgba(220, 220, 220, 0.3)",
+        text_primary:
+          mode === "dark" ? "rgba(255, 255, 255, 0.87)" : "rgba(0, 0, 0, 0.87)",
+        text_secondary:
+          mode === "dark" ? "rgba(255, 255, 255, 0.54)" : "rgba(0, 0, 0, 0.54)",
       },
     },
     typography: {
@@ -140,4 +150,5 @@ export const getTheme = (mode) => {
     },
   });
 }
+
 
