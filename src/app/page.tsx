@@ -32,10 +32,10 @@ export default function Home() {
             <h2 className="mb-12 text-xl font-bold lg:text-2xl">
               My name is Abbaas Mohamud
             </h2>
-            <h1 className="mb-16 text-xl font-bold lg:text-3xl">
+            <h1 className="mb-8 text-xl font-bold lg:text-3xl">
               I&apos;m an{" "}
               <Highlight>
-                <span className="lg:px-4">Aspring Software Engineer</span>
+                <span className="lg:px-14">Aspring Software Engineer</span>
               </Highlight>
             </h1>
             <h2 className="mb-4 text-xl font-semibold lg:text-2xl">
@@ -66,7 +66,7 @@ export default function Home() {
                 />
                 <p>Github</p>
               </Link>
-              <Link href={""} target="_blank">
+              <Link href={"https://drive.google.com/file/d/1XxaxXEtdTOnilOticfwyXR_DVHJnPeWZ/view?usp=sharing"} target="_blank">
                 <IconFileDescription
                   size={50}
                   className="duration-200 hover:scale-150 hover:text-green-500"
@@ -100,18 +100,20 @@ export default function Home() {
               <Image
                 src={umn}
                 alt="Univeristy of Minnesota Logo"
-                width={400}
-                height={400}
+                width={100}
+                height={100}
                 className="w-full flex-shrink-0 object-cover"
               />
             </div>
           </div>
           <div>
-            <div className="mb-[10px] mt-[50px] flex items-center justify-center text-3xl font-bold leading-tight">
-              <h1>University of Minnesota</h1>
+            <div className="mb-[10px] mt-[50px] flex items-center justify-center text-sm font-bold leading-tight md:text-4xl">
+              <h3>University of Minnesota</h3>
             </div>
-            <p className="text-md font-medium">Bachelor of Arts in Computer Science</p>
-            <p>Sep 2022 - May 2026</p>
+            <p className="md:text-xl text-xs font-medium">
+              Bachelor of Arts in Computer Science
+            </p>
+            <p className="md:text-lg text-xs">Sep 2022 - May 2026</p>
           </div>
         </div>
 
