@@ -33,18 +33,18 @@ export default function Home() {
               My name is Abbaas Mohamud
             </h2>
             <h1 className="mb-8 text-xl font-bold lg:text-3xl">
-              I&apos;m an{" "}
+              I&apos;m an
               <Highlight>
-                <span className="lg:px-14">Aspring Software Engineer</span>
+                <span className="lg:px-2">Aspiring Software Engineer</span>
               </Highlight>
             </h1>
             <h2 className="mb-4 text-xl font-semibold lg:text-2xl">
-              Specializing in Python, Java, JavaScript, and MySQL.
+              Specializing in TypeScript, Java, Python, and MySQL.
             </h2>
             <p className="text-sm lg:text-base">
               I&apos;m a currently attending the University of Minnesota.
               I&apos;ve been creating system-based web applications using Java
-              with Spring Boot, JavaScript with React and MySQL.
+              with Spring Boot, TypeScript with React and MySQL.
             </p>
             {/* socials  */}
             <div className="mt-12 flex items-center space-x-8">
