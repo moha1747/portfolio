@@ -14,6 +14,8 @@ import game from "@/assets/images/portfolio/game.gif";
 import main from "@/assets/images/portfolio/main.png";
 import chat from "@/assets/images/portfolio/chat.png";
 import quote from "@/assets/images/portfolio/Quote.png";
+import banking from "@/assets/images/banking.png"
+import nextjs from "@/assets/images/portfolio/nextjs.png"
 
 
 
@@ -22,11 +24,20 @@ import quote from "@/assets/images/portfolio/Quote.png";
 
 export const portfolioData: PortfolioType[] = [
   {
+    url: "https://electro9-nextjs-cms.vercel.app",
+    year: 2023,
+    title: "CRM dashboard built with Next.JS",
+    description:
+      "CRM dashboard that allows users to enjoy a flexible and intuitive interface that adapts to their unique workflow",
+    image: nextjs.src,
+    tags: ["JavaScript", "React", "Next.JS", "Node.JS", "MUI"],
+  },
+  {
     url: "https://omnistudy-test.firebaseapp.com",
     year: 2024,
     title: "OmniStudy",
     description:
-      "Discover personalized companions, adaptive schedules, and real-time feedback for an unparalleled learning experience.",
+      "Student productivity app built while I was a Google Developer Student",
     image: omnistudy.src,
     tags: [
       "TypeScript",
@@ -37,14 +48,14 @@ export const portfolioData: PortfolioType[] = [
     ],
   },
   {
-    url: "https://diversity-in-tech-workplace.vercel.app/",
+    url: "https://github.com/moha1747/Banking-System",
     year: 2024,
-    title: "MLH DataFest Hackathon",
-    description:
-      "Data processing pipeline for the DataFest Hackathon, by organizing diversity data for tech companies",
-    image: hackathon.src,
-    tags: ["Python", "Pandas", "JavaScript", "React", "Material UI"],
+    title: "Banking System",
+    description: "Banking sytem created using Java, Tomcat and CSS",
+    image: banking.src,
+    tags: ["Java", "Servelets", "Tomcat", "HTML/CSS"],
   },
+
   // {
   //   urlMissingReason: "Internal Use Only (In deployment)",
   //   year: 2024,
@@ -54,8 +65,9 @@ export const portfolioData: PortfolioType[] = [
   //   image: game.src,
   //   tags: ["JavaScript", "React", "Tailwind", "Data Structures & Algorithms"],
   // },
+
   {
-    urlMissingReason: "Internal Use Only (In deployment)",
+    url: "https://github.com/moha1747/Employee-Management-System",
     year: 2024,
     title: "Employee Management System",
     description: "A Crud implentation of an Employee Management System",
@@ -70,15 +82,16 @@ export const portfolioData: PortfolioType[] = [
       "AWS: S3, EC2, RDS",
     ],
   },
-  // {
-  //   urlMissingReason: "Quote Api no longer working",
-  //   year: 2024,
-  //   title: "Quote of the day",
-  //   description:
-  //     "A web app that generates a random quote or based on key words used through search feature",
-  //   image: quote.src,
-  //   tags: ["JavaScript", "Node.JS", "React", "Tailwind",],
-  // },
+  {
+    url: "https://diversity-in-tech-workplace.vercel.app/",
+    year: 2024,
+    title: "MLH DataFest Hackathon",
+    description:
+      "Data processing pipeline for the DataFest Hackathon, by organizing diversity data for tech companies",
+    image: hackathon.src,
+    tags: ["Python", "Pandas", "JavaScript", "React", "MUI"],
+  },
+
   // {
   //   urlMissingReason: "Internal Use Only (In deployment)",
   //   year: 2024,

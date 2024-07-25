@@ -61,4 +61,5 @@ export const workData: WorkType[] = [
     companyLogo: codePath.src,
     jobTitle: "Web Developer Tech Fellow",
   },
+  
 ];
