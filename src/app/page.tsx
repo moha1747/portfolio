@@ -66,7 +66,12 @@ export default function Home() {
                 />
                 <p>Github</p>
               </Link>
-              <Link href={"https://drive.google.com/file/d/1XxaxXEtdTOnilOticfwyXR_DVHJnPeWZ/view?usp=sharing"} target="_blank">
+              <Link
+                href={
+                  "https://drive.google.com/file/d/1KJqY_jDKXazF01F63xFC4ib48yrXdMpG/view?usp=sharing"
+                }
+                target="_blank"
+              >
                 <IconFileDescription
                   size={50}
                   className="duration-200 hover:scale-150 hover:text-green-500"
@@ -110,10 +115,10 @@ export default function Home() {
             <div className="mb-[10px] mt-[50px] flex items-center justify-center text-sm font-bold leading-tight md:text-4xl">
               <h3>University of Minnesota</h3>
             </div>
-            <p className="md:text-xl text-xs font-medium">
+            <p className="text-xs font-medium md:text-xl">
               Bachelor of Arts in Computer Science
             </p>
-            <p className="md:text-lg text-xs">Sep 2022 - May 2026</p>
+            <p className="text-xs md:text-lg">Sep 2022 - May 2026</p>
           </div>
         </div>
 
