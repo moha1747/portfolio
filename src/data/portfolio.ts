@@ -43,6 +43,7 @@ export const portfolioData: PortfolioType[] = [
       "TypeScript",
       "Python",
       "React",
+      "TailwindCSS",
       "Firebase",
       "Google Cloud Platform",
     ],
