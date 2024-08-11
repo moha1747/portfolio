@@ -31,13 +31,6 @@ export const monthNames = [
 export const workData: WorkType[] = [
   {
     yearStart: 2024,
-    monthStart: 6,
-    companyName: "CodePath",
-    companyLogo: codePath.src,
-    jobTitle: "FullStack Tech Fellow",
-  },
-  {
-    yearStart: 2024,
     monthStart: 5,
     companyName: "University of Minnesota",
     companyLogo: UMN.src,
@@ -50,16 +43,13 @@ export const workData: WorkType[] = [
     monthEnd: 4,
     companyName: "Google Developer Student Club",
     companyLogo: gdsc.src,
-    jobTitle: "Software Engineer",
+    jobTitle: "Google Developer Student",
   },
   {
     yearStart: 2023,
     monthStart: 7,
-    yearEnd: 2023,
-    monthEnd: 11,
     companyName: "CodePath",
     companyLogo: codePath.src,
-    jobTitle: "Web Developer Tech Fellow",
+    jobTitle: "Tech Fellow",
   },
-  
 ];
